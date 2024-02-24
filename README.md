@@ -149,3 +149,4 @@ table:
 - https://jasemiller.medium.com/a-fix-for-outlook-image-issues-in-html-email-campaigns-b8dd1c8f7d16
 - https://htmlemail.io/inline/
 - https://templates.mailchimp.com/resources/inline-css/
+- https://stackoverflow.com/questions/13785587/if-ie-is-not-working-as-expected-in-this-case
