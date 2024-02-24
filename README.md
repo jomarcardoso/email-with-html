@@ -150,3 +150,4 @@ table:
 - https://htmlemail.io/inline/
 - https://templates.mailchimp.com/resources/inline-css/
 - https://stackoverflow.com/questions/13785587/if-ie-is-not-working-as-expected-in-this-case
+- https://en.wikipedia.org/wiki/Conditional_comment
