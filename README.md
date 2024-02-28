@@ -44,13 +44,21 @@ Other thing very important is the base HTML for any email agent and also a CSS r
 
 The image below is a comparison in Gmail before and after applied the default CSS reset and the CSS inside the document. The main difference of this improvement is the width is well defined for all the content, and of course the background is there.
 
-### Load CSS
+![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/becabe6c-eb71-401c-921b-1da8b621d60b "left side of the image is before and the right one is after")
+
+## Load CSS
 
 As you can check in this [site of email clients what support](https://www.caniemail.com/features/html-link/) the link tag to import the styles is barely compatible instead of this you are going to prefer use style tags. Event with the styles inside the document [there is some limitations](https://www.caniemail.com/features/html-style/) if import in the head or in the body tag. Some email clients cut the elements out of the body tag and others does not accept styles inside the body. The bullet proof style tag is to copy the same style inside head and body and also create a fake head tag to be removed by some email clients.
 
 ![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/c73aa236-94ed-4369-bca2-26eb95af0abe "style tag in head and body | source: https://mosaico.io/email-client-tricks/double-head-trick-yahoo-app-android/")
 
-### Fake body
+### style tags
+
+A rule that I don't know right if are necessary, **embed the CSS in style tags** and **always duplicate and put the style tag in body and head elements.** There're rumors that some email clients cut the head tag and others that ignore CSS out of the a tag style inside the head, so we did both to ensure that will work well. Instead of write the styles and also duplicate them, I made a script that load the CSS, put in a tag style twice.
+
+![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/4259b3f2-d004-4ffa-9b34-8a60e866cd2c)
+
+## Fake body
 
 Get rid of body tag it doesn't belong to your email content. Instead of this, do yourself fake body tag and in this element you can place properties like background and that won't be removed. It's useful for Gmail.
 
@@ -59,12 +67,6 @@ Get rid of body tag it doesn't belong to your email content. Instead of this, do
 ## Styles
 
 If we dont't use conventional tags, we don't use conventional CSS simple that. A common library like Bootstrap won't work well with tables. 
-
-### style tags
-
-A rule that I don't know right if are necessary, **embed the CSS in style tags** and **always duplicate and put the style tag in body and head elements.** There're rumors that some email clients cut the head tag and others that ignore CSS out of the a tag style inside the head, so we did both to ensure that will work well. Instead of write the styles and also duplicate them, I made a script that load the CSS, put in a tag style twice.
-
-![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/4259b3f2-d004-4ffa-9b34-8a60e866cd2c)
 
 ### CSS
 
@@ -121,9 +123,6 @@ I took a screenshot of the SVG images and saved it as .png. Email don't send ima
 
 ## Base HTML
 
-
-
-![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/becabe6c-eb71-401c-921b-1da8b621d60b "left side of the image is before and the right one is after")
 
 ### CSS Inline
 
