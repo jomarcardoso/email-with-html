@@ -38,6 +38,12 @@ About emails, redundancy is important to reach the same result in many clients, 
 
 Just like on the Web it is necessary to normalize some styles to become the development easier. It is better to apply resets because we can only investigate the styles on a browser with dev tools, but we can not see the effect of them for example in an mobile app or a desktop software. Instead of try to find out a problem of styles, apply the reset, possibly the it is solved. You can copy the [resets that I use in my personal projects.](https://github.com/jomarcardoso/email/blob/master/projects/html/styles/reset.css)
 
+Other thing very important is the base HTML for any email agent and also a CSS reset for general and specific agents. You can copy the reset.css and the base html from my GitHub. It's necessary move applied properties from the body to new root tag as part of the content because some email clients ignore the styles of the body tag e.c Gmail.
+
+![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/81233ab2-edf5-4e39-b3e3-28fa80f697ff)
+
+The image below is a comparison in Gmail before and after applied the default CSS reset and the CSS inside the document. The main difference of this improvement is the width is well defined for all the content, and of course the background is there.
+
 ### Load CSS
 
 As you can check in this [site of email clients what support](https://www.caniemail.com/features/html-link/) the link tag to import the styles is barely compatible instead of this you are going to prefer use style tags. Event with the styles inside the document [there is some limitations](https://www.caniemail.com/features/html-style/) if import in the head or in the body tag. Some email clients cut the elements out of the body tag and others does not accept styles inside the body. The bullet proof style tag is to copy the same style inside head and body and also create a fake head tag to be removed by some email clients.
@@ -113,15 +119,9 @@ Summary
 
 I took a screenshot of the SVG images and saved it as .png. Email don't send images instead of this you have two options, put the images online in a CDN or send as a base64 image.
 
-## Reset of CSS
-
 ## Base HTML
 
-Other thing very important is the base HTML for any email agent and also a CSS reset for general and specific agents. You can copy the reset.css and the base html from my GitHub. It's necessary move applied properties from the body to new root tag as part of the content because some email clients ignore the styles of the body tag e.c Gmail.
 
-![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/81233ab2-edf5-4e39-b3e3-28fa80f697ff)
-
-The image below is a comparison in Gmail before and after applied the default CSS reset and the CSS inside the document. The main difference of this improvement is the width is well defined for all the content, and of course the background is there.
 
 ![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/becabe6c-eb71-401c-921b-1da8b621d60b "left side of the image is before and the right one is after")
 
