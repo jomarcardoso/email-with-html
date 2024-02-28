@@ -54,6 +54,12 @@ Get rid of body tag it doesn't belong to your email content. Instead of this, do
 
 If we dont't use conventional tags, we don't use conventional CSS simple that. A common library like Bootstrap won't work well with tables. 
 
+### style tags
+
+A rule that I don't know right if are necessary, **embed the CSS in style tags** and **always duplicate and put the style tag in body and head elements.** There're rumors that some email clients cut the head tag and others that ignore CSS out of the a tag style inside the head, so we did both to ensure that will work well. Instead of write the styles and also duplicate them, I made a script that load the CSS, put in a tag style twice.
+
+![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/4259b3f2-d004-4ffa-9b34-8a60e866cd2c)
+
 ### CSS
 
 Something almost excluded for most people now turns necessary for compatility of email template, it is CSS inline. Perhaps style inline is not necessary anymore, but to not test every email client, prefer this 100% granted solution. There's some tool on Web to help you with this task and I'm gonna recommend to use [htmlemail.io](https://htmlemail.io/inline/) because this tool also put the legacy attributes such as bgcolor, width...
@@ -108,10 +114,6 @@ Summary
 I took a screenshot of the SVG images and saved it as .png. Email don't send images instead of this you have two options, put the images online in a CDN or send as a base64 image.
 
 ## Reset of CSS
-
-A rule that I don't know right if are necessary, **embed the CSS in style tags** and **always duplicate and put the style tag in body and head elements.** There're rumors that some email clients cut the head tag and others that ignore CSS out of the a tag style inside the head, so we did both to ensure that will work well. Instead of write the styles and also duplicate them, I made a script that load the CSS, put in a tag style twice.
-
-![image](https://github.com/jomarcardoso/email-with-html/assets/27368585/4259b3f2-d004-4ffa-9b34-8a60e866cd2c)
 
 ## Base HTML
 
