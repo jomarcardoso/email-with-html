@@ -110,7 +110,41 @@ Web safe fonts
 
 ## Accessibility
 
-ARIA attributes
+In the web the HTML 5 semantic tags work very well for screen readers, but for emails tags like `<header>` and `<footer>` are ignored in some email clients or even break the layout since they are not table tags. But we can work with of these limitations and even give a good email to any expererience.
+
+### Define the language
+
+The language definition is primordial since it guides the screen readers pronunciation. By default in the web the attribute `lang` usually is in the root tag of the document i.e. the `<html>` tag. To write the email we follow this, but some falbacks in case the email client cut part of the email document. To garantee put the attribute in all of these relevant tags that I pointed below, and unsure that the language wil be keeped in your email.
+
+```html
+<html lang="pt-BR">
+  <head lang="pt-BR"></head>
+
+  <body lang="pt-BR">
+    <table lang="pt-BR"></table>
+  </body>
+</html>
+```
+
+### Heading tags
+
+The heading tags works well in HTML email because it is also used in text document. The heading level one is the heading that brings the document subject, not the brand logo or anything else, then at the begining of the content of the email put the `<h1>` and keep using the other heading levels if necessary.
+
+You can also use `<em>` and `<strong>` tags to emphasis parts of the text.
+
+### Texts and lternative texts
+
+Even if your context explain an image, you need to put the alternative text in `img` tags to say what not blind people see in the image. The text around the image says "one of the biggest ships..." and the image has the alternative text "bording day on Titanic" as did now to you, every lector of your email will understand it.
+
+Be descritive in the hiperlinks, do not write "click here", but a long and descritive content, because as like no blind people jumps content, the blind people use jumps the content by "controls" or "headings" and if them get to this elements, they need to understand where they are and what happened if they click in that link.
+
+### ARIA attributes
+
+ARIA stands for Accessible Rich Internet Applications. It is a set of attributes that define ways to make digital content more accessible. 
+
+The most important ARIA attribute for HTML emails is the `role="presentation"` just because it removes the table semantic that we had not wanted put to create the layout. In other words with this attribute the table tag becomes a "div" tag. `<table role="presentation"><tr><td>`.
+
+Another useful ARIA attribute is `aria-hidden="true"` and you are going to use in contents that has no relevant information, like icons or any other decorative images that sometimes are necessary to create a more decorated email.
 
 ## Conclusion
 
@@ -152,3 +186,4 @@ table:
 - https://templates.mailchimp.com/resources/inline-css/
 - https://stackoverflow.com/questions/13785587/if-ie-is-not-working-as-expected-in-this-case
 - https://en.wikipedia.org/wiki/Conditional_comment
+- https://www.litmus.com/blog/ultimate-guide-accessible-emails
